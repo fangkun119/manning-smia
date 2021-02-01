@@ -20,7 +20,7 @@
 >
 > 下图是第一章中的模式，映射到的Spring Cloud项目
 >
-> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch2_pattern_support.jpg)
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch2_pattern_support.jpg" width="800" /></div>
 
 ### 2.1.1 Spring Cloud Config
 
@@ -93,6 +93,7 @@ Spring Cloud Security（https://cloud.spring.io/spring-cloud-security/）
 > @SpringBootApplication
 > @RestController
 > @RequestMapping(value="hello")
+> // @EnableEurekaClient
 > //（1）将这个Spring Boot Application注册到Eureka服务发现代理中
 > //（2）引入spring-cloud-starter-netflix-eureka-client依赖时该注解为optional
 > @EnableEurekaClient 
@@ -103,9 +104,9 @@ Spring Cloud Security（https://cloud.spring.io/spring-cloud-security/）
 > 
 > 	public String helloRemoteServiceCall(String firstName,String lastName){
 > 		RestTemplate restTemplate = new RestTemplate();
->         // RestTemplate
->         // (1) 使用传入的Logical Server ID，以便访问Erueka获得服务实例的物理位置
->         // (2) 使用Spring Cloud Load Balancer在客户端选择不同的服务实例，不使用集中式的负载均衡Server以避免单点故障
+> 		// RestTemplate
+> 		// (1) 使用传入的Logical Server ID，以便访问Erueka获得服务实例的物理位置
+> 		// (2) 使用Spring Cloud Load Balancer在客户端选择不同的服务实例，不使用集中式的负载均衡Server以避免单点故障
 > 		ResponseEntity<String> restExchange = restTemplate.exchange(
 > 				"http://logical-service-id/name/{firstName}/{lastName}",
 > 				HttpMethod.GET, null, 
@@ -123,35 +124,35 @@ Spring Cloud Security（https://cloud.spring.io/spring-cloud-security/）
 
 ##  2.3 云原生微服务最佳实践
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch2_12factor.jpg" style="zoom:65%;" />
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch2_12factor.jpg" width="800" /></div
 
 ### 2.3.01 代码库
 
-> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_codebase.jpg)
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_codebase.jpg" width="800" /></div>
 
 ### 2.3.02 依赖
 
-> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_proj_dependencies.jpg)
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_proj_dependencies.jpg" width="800" /></div>
 
 ###  2.3.03 配置
 
-> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_config.jpg)
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_config.jpg" width="800"/></div>
 
 
 
 ### 2.3.04 支持服务（Backing Services）
 
-> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_backsvc.jpg)
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_backsvc.jpg" width="800" /></div>
 
 
 
 ### 2.3.05 构建、发布、运行
 
-> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_release_proc.jpg)
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_release_proc.jpg" width="800" /></div>
 
 ### 2.3.06 无状态
 
-> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_stateless.jpg)
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_stateless.jpg" width="800" /></div>
 
 
 
@@ -161,7 +162,7 @@ Spring Cloud Security（https://cloud.spring.io/spring-cloud-security/）
 
 ### 2.3.08 并发
 
-> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/sima2_ch02_concurrency.jpg)
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/sima2_ch02_concurrency.jpg" width="800" /></div>
 
 ### 2.3.09 Disposability
 
@@ -173,7 +174,7 @@ Spring Cloud Security（https://cloud.spring.io/spring-cloud-security/）
 
 ### 2.3.11 日志
 
-> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/sima2_ch02_log.jpg)
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/sima2_ch02_log.jpg" width="800" /></div>
 
 ### 2.3.12 Admin Processes
 
@@ -193,15 +194,15 @@ Spring Cloud Security（https://cloud.spring.io/spring-cloud-security/）
 
 ### 2.5.2 编写项目轮廓（Skeleton Project）
 
-> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_spring_initializer1.jpg)
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_spring_initializer1.jpg" width="800" /></div>
 >
-> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_spring_initializer2.jpg)
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_spring_initializer2.jpg" width="800" /></div>
 
 
 
-> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_proj_structure.jpg)
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_proj_structure.jpg" width="800" /></div>
 >
-> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_proj_dependencies.jpg)
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch02_proj_dependencies.jpg" width="800" /></div>
 
 
 

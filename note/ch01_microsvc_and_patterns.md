@@ -224,7 +224,7 @@
 
 ## 1.11 微服务日志与跟踪模式（Logging and Tracing Pattern）
 
-> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_logntrace_pattern.jpg" width="600" /></div>
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_logntrace_pattern.jpg" width="800" /></div>
 >
 > 微服务的一个难点是debug、tracing以及monitor非常困难（一个内部服务可以触发多个指向其他内部服务的调用），后续的章节会讲解如何使用`Spring Cloud Sleuth`、`Zipkin`以及`ELK`来实现分布式tracing，具体的pattern包括如下三个：
 >
@@ -234,7 +234,7 @@
 
 ## 1.12 性能指标度量模式（Application Metrics Patterns）
 
-> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_metrics_pattern.jpg" width="600" /></div>
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_metrics_pattern.jpg" width="800" /></div>
 >
 > 用于防止潜在的性能问题，涉及性能指标数据收集/存储/查询/报警等，该模式会使用pull和push两种方式，由以下3个组件构成 ：
 >
@@ -244,7 +244,7 @@
 
 ## 1.13 开发和部署模式（Build and Deployment Patterns）
 
-> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_deploy_pattern.jpg" width="600" /></div>
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_deploy_pattern.jpg" width="800" /></div>
 >
 > 关于如何构建deployment pipeline，在第12章介绍，包含如下内容：
 >
