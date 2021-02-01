@@ -44,16 +44,16 @@
 
 传统`Monolithic式架构`与`微服务架构`的对比
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_arch_cmp.jpg" align='left' style="width:600px;"/>
+> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_arch_cmp.jpg)
 
 传统`Monolithic式架构`要求多个部门手动同步他们各自维护的系统 ，因为这些系统将会构建成一个整体
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_monolithic_arch.jpg" align='left' style="width:600px;"/>
+> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_monolithic_arch.jpg)
 > 
 
 `微服务架构`用来响应系统、技术、组织增大后带来的挑战。整个系统由小型、松耦合、分布式的服务所组成
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_microsvc_arch.jpg" align='left' style="width:600px;"/>
+> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_microsvc_arch.jpg)
 > 
 
 微服务架构的设计目标
@@ -85,7 +85,7 @@
 
 > 本书演示如何使用Spring Boot、Spring Cloud以及相关技术构建微服务架构，下图是相关Service和technology integrations的概览（原书的图目前也不清楚）
 >
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_tech_overview.jpg" align='left' style="width:500px;"/>
+> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_tech_overview.jpg")
 >
 > 从用户发起请求开始，经历如下环节
 >
@@ -140,7 +140,7 @@
 >
 > 这些Model提供的服务如下图
 >
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_cloud_computing_models.jpg" align='left' style="width:600px;" />
+> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_cloud_computing_models.jpg)
 
 ### 1.05.3 为什么使用云环境部署微服务
 
@@ -152,7 +152,7 @@
 
 ## 1.06 构建微服务所需考虑的因素
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_microsvc_guide.jpg" align='left' style="width:600px;" />
+> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_microsvc_guide.jpg)
 >
 > 如上图，构建一个健壮的微服务，需要考虑的因素包括
 >
@@ -174,7 +174,7 @@
 
 ## 1.07 核心服务的开发模式（Core Microservice Development Pattern）
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_svc_comm.jpg" align='left' style="width:600px;" />
+> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_svc_comm.jpg)
 >
 > 设计一个微服务时，要考虑该服务如何被消费和通信，包括：
 >
@@ -192,7 +192,7 @@
 
 ## 1.08 路由模式（Routing Patterns）
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_routing_pattern.jpg" align='left' style="width:600px;" />
+> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_routing_pattern.jpg)
 >
 > 微服务路由模式解决客户端需要调用某个`内部服务`时，如何能够发现并"路由"到该服务，包括：
 >
@@ -203,7 +203,7 @@
 
 ## 1.09 客户端容错模式（Client Resiliency Pattern）
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_client_resiliency_pattern.jpg" align='left' style="width:600px;"/>
+> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_client_resiliency_pattern.jpg)
 >
 > `容错模式`用来防止单个内部服务（或单个节点）故障升级成系统故障并影响到用户，包括如下环节：
 >
@@ -216,7 +216,7 @@
 
 ## 1.10 安全模式（Security Pattern）
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_microsvc_security_pattern.jpg" align='left' style="width:600px;" />
+> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_microsvc_security_pattern.jpg)
 >
 > `安全模式`用来保证只有被授权的请求才可以访问服务，包括：
 >
@@ -226,7 +226,7 @@
 
 ## 1.11 微服务日志与跟踪模式（Logging and Tracing Pattern）
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_logntrace_pattern.jpg" align='left' style="width:600px;"/>
+> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_logntrace_pattern.jpg)
 >
 > 微服务的一个难点是debug、tracing以及monitor非常困难（一个内部服务可以触发多个指向其他内部服务的调用），后续的章节会讲解如何使用`Spring Cloud Sleuth`、`Zipkin`以及`ELK`来实现分布式tracing，具体的pattern包括如下三个：
 >
@@ -236,7 +236,7 @@
 
 ## 1.12 性能指标度量模式（Application Metrics Patterns）
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_metrics_pattern.jpg" align='left' style="width:600px;"/>
+> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_metrics_pattern.jpg)
 >
 > 用于防止潜在的性能问题，涉及性能指标数据收集/存储/查询/报警等，该模式会使用pull和push两种方式，由以下3个组件构成 ：
 >
@@ -246,7 +246,7 @@
 
 ## 1.13 开发和部署模式（Build and Deployment Patterns）
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_deploy_pattern.jpg" align='left' style="width:600px;" />
+> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_deploy_pattern.jpg)
 >
 > 关于如何构建deployment pipeline，在第12章介绍，包含如下内容：
 >
