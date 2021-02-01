@@ -174,7 +174,7 @@ Heroku的最佳实践指南（称为"[Twelve Factor App](https://12factor.net/)"
 
 > 创建`Cloud Native`应用程序准寻的指南，12个factor分别对应12个主题、以及与之相关的最佳实践
 >
-> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch2_12factor.jpg" width="500" /></di
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch2_12factor.jpg" width="500" /></div>
 
 ### 2.3.01 代码库
 
