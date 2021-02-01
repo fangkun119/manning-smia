@@ -44,7 +44,7 @@
 
 传统`Monolithic式架构`与`微服务架构`的对比
 
-> ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_arch_cmp.jpg)
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_arch_cmp.jpg" width="800"/></div>
 
 传统`Monolithic式架构`要求多个部门手动同步他们各自维护的系统 ，因为这些系统将会构建成一个整体
 
@@ -201,7 +201,7 @@
 > * `Service Routing`：为所有内部服务提供统一的`Entry Point`、以便安全策略及路由规则可以统一部署
 >     * 本书使用Spring Cloud API Gateway，在第8章介绍
 
-## 1.09 客户端容错模式（Client Resiliency Pattern）
+## 1.09 客户端弹性模式（Client Resiliency Pattern）
 
 > ![](https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_client_resiliency_pattern.jpg)
 >
