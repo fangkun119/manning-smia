@@ -46,19 +46,17 @@
 
 
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_arch_cmp.jpg" align='left' style="float:left;width:800px;" />
->
-> 
+> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_arch_cmp.jpg" align='left' style="width:600px;"/>
 
 传统`Monolithic式架构`要求多个部门手动同步他们各自维护的系统 ，因为这些系统将会构建成一个整体
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_monolithic_arch.jpg" align='left' style="float:left;width:800px;"/>
+> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_monolithic_arch.jpg" align='left' style="width:800px;"/>
 >
 > 
 
 `微服务架构`用来响应系统、技术、组织增大后带来的挑战。整个系统由小型、松耦合、分布式的服务所组成
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_microsvc_arch.jpg" align='left' style="float:left;width:800px;"/>
+> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_microsvc_arch.jpg" align='left' style="width:800px;"/>
 >
 > 
 
@@ -91,7 +89,7 @@
 
 > 本书演示如何使用Spring Boot、Spring Cloud以及相关技术构建微服务架构，下图是相关Service和technology integrations的概览（原书的图目前也不清楚）
 >
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_tech_overview.jpg" align='left' style="float:left;width:500px;"/>
+> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_tech_overview.jpg" align='left' style="width:500px;"/>
 >
 > 
 >
@@ -148,7 +146,7 @@
 >
 > 这些Model提供的服务如下图
 >
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_cloud_computing_models.jpg" align='left' style="float:left;width:800px;" />
+> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_cloud_computing_models.jpg" align='left' style="width:800px;" />
 
 ### 1.05.3 为什么使用云环境部署微服务
 
@@ -160,7 +158,7 @@
 
 ## 1.06 构建微服务所需考虑的因素
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_microsvc_guide.jpg" align='left' style="float:left;width:600px;" />
+> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_microsvc_guide.jpg" align='left' style="width:600px;" />
 >
 > 
 >
@@ -184,7 +182,7 @@
 
 ## 1.07 核心服务的开发模式（Core Microservice Development Pattern）
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_svc_comm.jpg" align='left' style="float:left;width:600px;" />
+> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_svc_comm.jpg" align='left' style="width:600px;" />
 >
 > 
 >
@@ -204,7 +202,7 @@
 
 ## 1.08 路由模式（Routing Patterns）
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_routing_pattern.jpg" align='left' style="float:left;width:600px;" />
+> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_routing_pattern.jpg" align='left' style="width:600px;" />
 >
 > 
 >
@@ -217,7 +215,7 @@
 
 ## 1.09 客户端容错模式（Client Resiliency Pattern）
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_client_resiliency_pattern.jpg" align='left' style="float:left;width:600px;"/>
+> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_client_resiliency_pattern.jpg" align='left' style="width:600px;"/>
 >
 > 
 >
@@ -232,7 +230,7 @@
 
 ## 1.10 安全模式（Security Pattern）
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_microsvc_security_pattern.jpg" align='left' style="float:left;width:600px;" />
+> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_microsvc_security_pattern.jpg" align='left' style="width:600px;" />
 >
 > 
 >
@@ -244,7 +242,7 @@
 
 ## 1.11 微服务日志与跟踪模式（Logging and Tracing Pattern）
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_logntrace_pattern.jpg" align='left' style="float:left;width:800px;"/>
+> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_logntrace_pattern.jpg" align='left' style="width:800px;"/>
 >
 > 
 >
@@ -256,7 +254,7 @@
 
 ## 1.12 性能指标度量模式（Application Metrics Patterns）
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_metrics_pattern.jpg" align='left' style="float:left;width:800px;"/>
+> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_metrics_pattern.jpg" align='left' style="width:800px;"/>
 >
 > 
 >
@@ -268,7 +266,7 @@
 
 ## 1.13 开发和部署模式（Build and Deployment Patterns）
 
-> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_deploy_pattern.jpg" align='left' style="float:left;width:800px;" />
+> <img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia_ch01_deploy_pattern.jpg" align='left' style="width:800px;" />
 >
 > 
 >
