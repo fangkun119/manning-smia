@@ -25,7 +25,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# CH01 微服务介绍
+# CH01 微服务及构建模式
 
 > 本章包含四个方面的内容
 >
