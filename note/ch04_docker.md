@@ -20,7 +20,7 @@
       - [(1) `Cloud Native Buildpacks`构建工具](#1-cloud-native-buildpacks%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7)
         - [添加插件](#%E6%B7%BB%E5%8A%A0%E6%8F%92%E4%BB%B6)
         - [构建docker镜像并创建容器](#%E6%9E%84%E5%BB%BAdocker%E9%95%9C%E5%83%8F%E5%B9%B6%E5%88%9B%E5%BB%BA%E5%AE%B9%E5%99%A8)
-      - [(2) 分层JAR（`LAYERED_JAR`）](#2-%E5%88%86%E5%B1%82jarlayered_jar)
+      - [(2) 分层`JAR`（`LAYERED_JAR`）](#2-%E5%88%86%E5%B1%82jarlayered_jar)
         - [将层配置添加到pom.xml](#%E5%B0%86%E5%B1%82%E9%85%8D%E7%BD%AE%E6%B7%BB%E5%8A%A0%E5%88%B0pomxml)
         - [打包应用程序](#%E6%89%93%E5%8C%85%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F)
         - [获得该应用的分层信息](#%E8%8E%B7%E5%BE%97%E8%AF%A5%E5%BA%94%E7%94%A8%E7%9A%84%E5%88%86%E5%B1%82%E4%BF%A1%E6%81%AF)
@@ -34,6 +34,8 @@
 #  CH04 使用Docker
 
 > 作用、容器组件、容器与微服务集成
+>
+> 原书章节在线阅读：[https://livebook.manning.com/book/spring-microservices-in-action-second-edition/chapter-4/](https://livebook.manning.com/book/spring-microservices-in-action-second-edition/chapter-4/)
 >
 > 更多参考：《Docker in Action》
 
