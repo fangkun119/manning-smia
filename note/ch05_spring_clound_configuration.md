@@ -126,7 +126,7 @@
 >	<parent>
 >		<groupId>org.springframework.boot</groupId>
 >		<artifactId>spring-boot-starter-parent</artifactId>
-> 		<!-- (1) Spring Boot版本 -->
+>		<!-- (1) Spring Boot版本 -->
 >		<version>2.2.4.RELEASE</version>
 >		<relativePath/> <!-- 从仓库查找父POM而非本地 -->
 >	</parent>
@@ -138,7 +138,7 @@
 >		<spring-cloud.version>Hoxton.SR1</spring-cloud.version>
 >	</properties>
 >
-> 	<!-- (3) 依赖 -->
+>	<!-- (3) 依赖 -->
 >	<dependencies>
 >		<dependency>
 >			<groupId>org.springframework.cloud</groupId>
@@ -161,9 +161,9 @@
 >		</dependency>
 >	</dependencies>
 >
-> 	<!-- (4) Spring Cloud BOM（Bill Of Meterials）definition -->
-> 	<!--     包含使用的与当前Spring cloud版本兼容的第三方库和依赖 -->
-> 	<!--     版本号定义在上面注释为(2)的位置，本例是Hoxton.SR1 -->
+>	<!-- (4) Spring Cloud BOM（Bill Of Meterials）definition -->
+>	<!--     包含使用的与当前Spring cloud版本兼容的第三方库和依赖 -->
+>	<!--     版本号定义在上面注释为(2)的位置，本例是Hoxton.SR1 -->
 >	<dependencyManagement>
 >		<dependencies>
 >			<dependency>
@@ -271,30 +271,30 @@
 >$ /fangkundeMacBook-Pro/ fangkun@fangkundeMacBook-Pro.local:~/tmp/
 >$ curl http://localhost:8071/licensing-service/default
 >{
->    	"name": "licensing-service",
->    	"profiles": ["default"],
->     	"label": null,
->    	"version": null,
->    	"state": null,
->    	"propertySources": [{
->    		"name": "classpath:/config/licensing-service.properties",
->    		"source": {
->     			"example.property": "I AM THE DEFAULT",
->     			"spring.jpa.hibernate.ddl-auto": "none",
->     			"spring.jpa.database": "POSTGRESQL",
->     			"spring.datasource.platform": "postgres",
->     			"spring.jpa.show-sql": "true",
->     			"spring.jpa.hibernate.naming-strategy": "org.hibernate.cfg.ImprovedNamingStrategy",
->     			"spring.jpa.properties.hibernate.dialect": "org.hibernate.dialect.PostgreSQLDialect",
->     			"spring.database.driverClassName": "org.postgresql.Driver",
->     			"spring.datasource.testWhileIdle": "true",
->     			"spring.datasource.validationQuery": "SELECT 1",
->     			"management.endpoints.web.exposure.include": "*",
->     			"management.endpoints.enabled-by-default": "true"
->     		}
->     	}]
->     }
->     ~~~
+>	"name": "licensing-service",
+>		"profiles": ["default"],
+>		"label": null,
+>		"version": null,
+>		"state": null,
+>		"propertySources": [{
+>			"name": "classpath:/config/licensing-service.properties",
+>			"source": {
+> 		"example.property": "I AM THE DEFAULT",
+> 		"spring.jpa.hibernate.ddl-auto": "none",
+>		"spring.jpa.database": "POSTGRESQL",
+>		"spring.datasource.platform": "postgres",
+>		"spring.jpa.show-sql": "true",
+>		"spring.jpa.hibernate.naming-strategy": "org.hibernate.cfg.ImprovedNamingStrategy",
+>		"spring.jpa.properties.hibernate.dialect": "org.hibernate.dialect.PostgreSQLDialect",
+>		"spring.database.driverClassName": "org.postgresql.Driver",
+>		"spring.datasource.testWhileIdle": "true",
+>		"spring.datasource.validationQuery": "SELECT 1",
+>		"management.endpoints.web.exposure.include": "*",
+>		"management.endpoints.enabled-by-default": "true"
+>		}
+> 	}]
+>}
+>~~~
 
 例子：`/licensing-service/dev`返回[licensing-service.properties](../chapter5/configserver/src/main/resources/config/licensing-service.properties)以及[licensing-service-dev.properties](../chapter5/configserver/src/main/resources/config/licensing-service-dev.properties)的配置，这样`licensing-service`可以载入默认配置，然后对于在dev配置中存在的属性，用dev配置进行覆盖
 
@@ -303,38 +303,39 @@
 >$ /fangkundeMacBook-Pro/ fangkun@fangkundeMacBook-Pro.local:~/tmp/
 >$ curl http://localhost:8071/licensing-service/dev
 >{
->    	"name": "licensing-service",
->    	"profiles": ["dev"],
->     	"label": null,
->    	"version": null,
->    	"state": null,
->    	"propertySources": [{
->    		"name": "classpath:/config/licensing-service-dev.properties",
->    		"source": {
->     			"example.property": "I AM DEV",
->     			"spring.datasource.url": "jdbc:postgresql://database:5432/ostock_dev",
->     			"spring.datasource.username": "postgres",
->     			"spring.datasource.password": "postgres"
->     		}
->     	},{
->     		"name": "classpath:/config/licensing-service.properties",
->     		"source": {
->     			"example.property": "I AM THE DEFAULT",
->     			"spring.jpa.hibernate.ddl-auto": "none",
->     			"spring.jpa.database": "POSTGRESQL",
->     			"spring.datasource.platform": "postgres",
->     			"spring.jpa.show-sql": "true",
->     			"spring.jpa.hibernate.naming-strategy": "org.hibernate.cfg.ImprovedNamingStrategy",
->     			"spring.jpa.properties.hibernate.dialect": "org.hibernate.dialect.PostgreSQLDialect",
->     			"spring.database.driverClassName": "org.postgresql.Driver",
->     			"spring.datasource.testWhileIdle": "true",
->     			"spring.datasource.validationQuery": "SELECT 1",
->     			"management.endpoints.web.exposure.include": "*",
->     			"management.endpoints.enabled-by-default": "true"
->     		}
->     	}]
->     }
->     ~~~
+>	"name": "licensing-service",
+>	"profiles": ["dev"],
+>	"label": null,
+>	"version": null,
+>	"state": null,
+>	"propertySources": [{
+>		"name": "classpath:/config/licensing-service-dev.properties",
+>		"source": {
+>			"example.property": "I AM DEV",
+>			"spring.datasource.url": "jdbc:postgresql://database:5432/ostock_dev",
+>			"spring.datasource.username": "postgres",
+>			"spring.datasource.password": "postgres"
+>		}
+>	},{
+>		"name": "classpath:/config/licensing-service.properties",
+>		"source": {
+>			"example.property": "I AM THE DEFAULT",
+>			"spring.jpa.hibernate.ddl-auto": "none",
+>			"spring.jpa.database": "POSTGRESQL",
+>			"spring.datasource.platform": "postgres",
+>			"spring.jpa.show-sql": "true",
+>			"spring.jpa.hibernate.naming-strategy": "org.hibernate.cfg.ImprovedNamingStrategy",
+>			"spring.jpa.properties.hibernate.dialect": "org.hibernate.dialect.PostgreSQLDialect",
+>			"spring.database.driverClassName": "org.postgresql.Driver",
+>			"spring.datasource.testWhileIdle": "true",
+>			"spring.datasource.validationQuery": "SELECT 1",
+>			"management.endpoints.web.exposure.include": "*",
+>			"management.endpoints.enabled-by-default": "true"
+>		}
+>	}]
+>}
+>
+>~~~
 
 基于文件的配置存储，不适合大中型云应用程序，这意味着要在云中维护一套支持数量庞大的应用程序的共享文件系统。后续展示基于GitHub和 Hashicorp Vault的配置存储
 
