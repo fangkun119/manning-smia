@@ -39,7 +39,7 @@ services:
       CONFIGSERVER_URI: "http://configserver:8071"
       CONFIGSERVER_PORT:   "8071"
       DATABASESERVER_PORT: "5432"
-      # ENCRYPT_KEY:       "IMSYMMETRIC"
+      ENCRYPT_KEY:       "IMSYMMETRIC"
     depends_on:
       database:
         condition: service_healthy

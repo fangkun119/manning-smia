@@ -900,8 +900,15 @@ Step  4：在浏览器中访问`http://localhost:8080/actuator/env`可以查看`
 >		- "8071:8071"
 >	# 处于演示目的，实际应用中不应当硬编码在代码、配置或者Docker相关的文件中
 >	environment:
+>		# 将环境变量ENCRYPT_KEY在configserver中设置为秘钥的值
 >		ENCRYPT_KEY: "fje83Ki8403Iod87dne7Yjsl3THueh48jfuO9j4U2hf64Lo"
 >	...
+>licensingservice:
+>	...
+>	environment:
+>		...
+>		# 将使用访问configserver的服务，环境变量设为"IMSYMMETRIC"
+>		ENCRYPT_KEY: "IMSYMMETRIC"
 >~~~
 
 ###  5.4.2  property加密解密
