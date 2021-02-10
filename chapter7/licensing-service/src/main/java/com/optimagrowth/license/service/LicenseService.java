@@ -48,6 +48,8 @@ public class LicenseService {
 	@Autowired
 	OrganizationDiscoveryClient organizationDiscoveryClient;
 
+	Random rand = new Random();
+
 	private static final Logger logger = LoggerFactory.getLogger(LicenseService.class);
 
 	public License getLicense(String licenseId, String organizationId, String clientType){
@@ -127,6 +129,8 @@ public class LicenseService {
 
 	@SuppressWarnings("unused")
 	private List<License> buildFallbackLicenseList(String organizationId, Throwable t){
+		logger.debug("getLicensesByOrganization Correlation id: {}",
+				UserContextHolder.getContext().getCorrelationId());
 		List<License> fallbackList = new ArrayList<>();
 		License license = new License();
 		license.setLicenseId("0000000-00-00000");
@@ -137,9 +141,10 @@ public class LicenseService {
 	}
 
 	private void randomlyRunLong() throws TimeoutException{
-		Random rand = new Random();
 		int randomNum = rand.nextInt((3 - 1) + 1) + 1;
-		if (randomNum==3) sleep();
+		if (randomNum == 3) {
+			sleep();
+		}
 	}
 	private void sleep() throws TimeoutException{
 		try {
