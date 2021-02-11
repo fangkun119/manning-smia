@@ -1,6 +1,9 @@
 spring:
-    application:
-     name: eureka-server 
-    cloud:
-        config: 
-            uri: http://configserver:8071
+  application:
+    name: eureka-server
+  cloud:
+    config:
+      uri: http://configserver:8071
+  loadbalancer:
+    ribbon:
+      enabled: false
