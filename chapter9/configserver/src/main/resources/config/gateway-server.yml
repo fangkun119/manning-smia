@@ -25,6 +25,9 @@ spring:
   cloud:
     loadbalancer.ribbon.enabled: false
     gateway:
+        discovery.locator:
+          enabled: true
+          lowerCaseServiceId: true
         routes:
         - id: organization-service
           uri: lb://organization-service
@@ -40,7 +43,6 @@ spring:
           filters:
           - RewritePath=/license/(?<path>.*), /$\{path}
           - RemoveRequestHeader= Cookie,Set-Cookie
-   
     
 management:
   endpoints:
