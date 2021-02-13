@@ -621,8 +621,8 @@
 > 		SpringApplication.run(LicenseServiceApplication.class, args);
 > 	}
 > 
->     // 定义RestTemplate Bean
->     // 使用@LoadBalanced注解、使其变为LoadBalancer Awared
+>    	// 定义RestTemplate Bean
+>    	// 使用@LoadBalanced注解、使其变为LoadBalancer Awared
 > 	@LoadBalanced
 > 	@Bean
 > 	public RestTemplate getRestTemplate(){
