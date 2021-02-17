@@ -38,7 +38,7 @@ services:
       database:
         condition: service_healthy
       configserver:
-        condition: service_started  
+        condition: service_healthy
     networks:
       backend:
         aliases:
@@ -58,7 +58,7 @@ services:
       database:
         condition: service_healthy
       configserver:
-        condition: service_started
+        condition: service_healthy
       eurekaserver:
         condition: service_started
     networks:
@@ -110,8 +110,12 @@ services:
       database:
         condition: service_healthy
       configserver:
-        condition: service_started
+        condition: service_healthy
       kafkaserver:
+        condition: service_started
+      gatewayserver:
+        condition: service_started
+      eurekaserver:
         condition: service_started
     ports:
       - "8080:8080"
@@ -129,8 +133,12 @@ services:
       database:
         condition: service_healthy
       configserver:
-        condition: service_started
+        condition: service_healthy
       kafkaserver:
+        condition: service_started
+      gatewayserver:
+        condition: service_started
+      eurekaserver:
         condition: service_started
     ports:
       - "8081:8081"
