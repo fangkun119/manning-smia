@@ -30,6 +30,10 @@ services:
       backend:
         aliases:
           - "configserver"
+    healthcheck:
+      interval: 5s
+      timeout: 5s
+      retries: 10
   eurekaserver:
     image: ostock/eurekaserver:0.0.1-SNAPSHOT
     ports:
@@ -38,7 +42,7 @@ services:
       database:
         condition: service_healthy
       configserver:
-        condition: service_started
+        condition: service_healthy
     networks:
       backend:
         aliases:
@@ -58,7 +62,7 @@ services:
       database:
         condition: service_healthy
       configserver:
-        condition: service_started
+        condition: service_healthy
       eurekaserver:
         condition: service_started
     networks:
@@ -77,7 +81,7 @@ services:
       database:
         condition: service_healthy
       configserver:
-        condition: service_started
+        condition: service_healthy
       gatewayserver:
         condition: service_started
       eurekaserver:
@@ -98,7 +102,7 @@ services:
       database:
         condition: service_healthy
       configserver:
-        condition: service_started
+        condition: service_healthy
       gatewayserver:
         condition: service_started
       eurekaserver:
