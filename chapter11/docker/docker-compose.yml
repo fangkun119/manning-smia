@@ -1,4 +1,4 @@
-version: '2.1'
+version: '2.3'
 services:
   database:
     image: postgres:latest
@@ -32,6 +32,8 @@ services:
       backend:
         aliases:
           - "configserver"
+    healthcheck:
+      retries: 50
   eurekaserver:
     image: ostock/eurekaserver:0.0.1-SNAPSHOT
     container_name: eurekaServer
@@ -41,7 +43,7 @@ services:
       database:
         condition: service_healthy
       configserver:
-        condition: service_started  
+        condition: service_healthy
     networks:
       backend:
         aliases:
@@ -62,7 +64,7 @@ services:
       database:
         condition: service_healthy
       configserver:
-        condition: service_started
+        condition: service_healthy
       eurekaserver:
         condition: service_started
     networks:
@@ -87,7 +89,7 @@ services:
       - KAFKA_ADVERTISED_HOST_NAME=kafka
       - KAFKA_ADVERTISED_PORT=9092
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
-      - KAFKA_CREATE_TOPICS=dresses:1:1,ratings:1:1
+      - KAFKA_CREATE_TOPICS=dresses:1:1,ratings:1:1,orgChangeTopic:1:1
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
     depends_on:
@@ -96,6 +98,7 @@ services:
       backend:
         aliases:
           - "kafka"
+    # todo: 使用telnet zookeeper 2181添加zookeeper健康检查依赖
   redisserver:
     image: redis:alpine
     container_name: redis
@@ -118,7 +121,7 @@ services:
       database:
         condition: service_healthy
       configserver:
-        condition: service_started
+        condition: service_healthy
       kafkaserver:
         condition: service_started
     ports:
@@ -138,7 +141,7 @@ services:
       database:
         condition: service_healthy
       configserver:
-        condition: service_started
+        condition: service_healthy
       kafkaserver:
         condition: service_started
     ports:
