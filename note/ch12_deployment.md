@@ -463,6 +463,8 @@ Step 6. 为镜像创建标签
 >
 > <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch12_docker_images_in_aws_registry.jpg" width="800" /></di
 
+
+
 Step 7. 将Docker Image推送到ECR Docker Image Repository
 
 > ~~~bash
