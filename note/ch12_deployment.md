@@ -461,11 +461,10 @@ Step 6. 为镜像创建标签
 >
 > 该命令将为所有镜像创建一个新标签，如果此时执行docker images命令，输出类似下图
 >
-> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch12_docker_images_in_aws_registry.jpg" width="800" /></di
+> <div align="left"><img src="https://raw.githubusercontent.com/kenfang119/pics/main/microservice/smia2_ch12_docker_images_in_aws_registry.jpg" width="800" /></div>
+> 
 
-
-
-Step 7. 将Docker Image推送到ECR Docker Image Repository
+Step 7 . 将Docker Image推送到ECR Docker Image Repository
 
 > ~~~bash
 > # 将[*-repository-uri]替换为Step 5中ECR返回的值
